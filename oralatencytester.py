@@ -348,12 +348,12 @@ class TCPPingGUI(tk.Tk):
             name = game.get('name', '')
             address_str = game.get('address', '')
             protected = game.get('protected', False)
-            started = game.get('started', False)
+            state = game.get('state', 0)   # <-- Get 'state', default 0
 
             # Only process games that match the specified criteria
             if mod_title == "Red Alert" and version == "release-20250330" and not protected and address_str:
-                # Filter out started games if filter is enabled
-                if self.filter_remove_started and started:
+                # Filter out games with state == 2 if filter is enabled
+                if self.filter_remove_started and state == 2:
                     continue
                 try:
                     ip, port = address_str.split(':')
