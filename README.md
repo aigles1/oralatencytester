@@ -1,4 +1,4 @@
-# oralatencytester
+# ora latency tester
 [OpenRA](https://github.com/OpenRA/OpenRA) Red Alert servers latency tester.<br/>
 Just run the script, click File - Refresh, and hit Test All, or Retry to test one at time.<br/>
 The filter option allows you to only show games that are empty/waiting because games that have started will have their port closed.<br/>
